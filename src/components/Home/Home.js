@@ -7,14 +7,22 @@ import './Home.css';
 
 export default function Home() {
   // add useState calls here for title, subtitle, font, align, and text
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubtitle] = useState('');
+  const [title, setTitle] = useState('Title');
+  const [subtitle, setSubtitle] = useState('Subtitle');
+  const [text, setText] = useState('Blog Content');
 
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
-      <Preview title={title} subtitle={subtitle} />
-      <Editor title={title} setTitle={setTitle} subtitle={subtitle} setSubtitle={setSubtitle} />
+      <Preview title={title} subtitle={subtitle} text={text} />
+      <Editor
+        title={title}
+        setTitle={setTitle}
+        subtitle={subtitle}
+        setSubtitle={setSubtitle}
+        text={text}
+        setText={setText}
+      />
     </main>
   );
 }
