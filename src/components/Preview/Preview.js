@@ -14,5 +14,12 @@ export default function Preview() {
   //   <p>This is some blog text. </p>
   // </div>
 
-  return <></>;
+  return (
+    <div className="preview">
+      <h1>Blog Preview</h1>
+      <h2>Title</h2>
+      <h3>Subtitle</h3>
+      <p>Text Content</p>
+    </div>
+  );
 }
