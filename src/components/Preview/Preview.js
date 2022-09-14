@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Preview.css';
 
-export default function Preview() {
+export default function Preview({ title }) {
   // implement a Preview screen here
   //  Note - the HTML should have the following structure
   //  the main div should have a class of preview and the font-name prop
@@ -17,7 +17,7 @@ export default function Preview() {
   return (
     <div className="preview">
       <h1>Blog Preview</h1>
-      <h2>Title</h2>
+      <h2>{title}</h2>
       <h3>Subtitle</h3>
       <p>Text Content</p>
     </div>
