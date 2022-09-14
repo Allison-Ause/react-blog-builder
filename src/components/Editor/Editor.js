@@ -11,7 +11,12 @@ export default function Editor({
   setText,
   font,
   setFont,
+  setAlignment,
 }) {
+  const handleAlignment = (e) => {
+    setAlignment(e.target.value);
+  };
+
   return (
     <div className="editor">
       <div className="form-control">
@@ -39,15 +44,21 @@ export default function Editor({
         <label>Alignment</label>
         <div className="radio-group">
           <label>
-            <input name="align" type="radio" value="left" />
+            <input
+              defaultChecked
+              name="align"
+              type="radio"
+              value="left"
+              onClick={handleAlignment}
+            />
             <i className="ri-align-left"></i>
           </label>
           <label>
-            <input name="align" type="radio" value="center" />
+            <input name="align" type="radio" value="center" onClick={handleAlignment} />
             <i className="ri-align-center"></i>
           </label>
           <label>
-            <input name="align" type="radio" value="right" />
+            <input name="align" type="radio" value="right" onClick={handleAlignment} />
             <i className="ri-align-right"></i>
           </label>
         </div>
